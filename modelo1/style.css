@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000833;
+    color: #f8fafc;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.biblioteca{
+    max-width: 900px;
+    margin-inline: auto;
+    padding: 48px 20px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.card{
+    border-radius: 18px;
+    perspective: 1200px;
+}
+
+.card__interno{
+    display: grid;
+    min-height: 240px;
+    /* Mantém a frente e o verso no espaço 3D */
+    transform-style: preserve-3d;
+    /* animar a ida e volta do card */
+    transition: transform 0.6s ease;
+
+}
+
+.card__face{
+    /* Sobrepor */
+    grid-area: 1/1;
+    backface-visibility: hidden;
+    padding: 24px;
+    border-radius: 18px;
+    
+    
+    box-shadow: 0px 12px 20px 8px #000522;
+    transition: box-shadow 0.3s ease;
+}
+
+.card__face{
+    font-size: 1.6rem;
+}
+
+.card__frente{
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.card__frente--minecraft{
+    background: linear-gradient(145deg, #30a85e, #0b7046);
+}
+
+.card__frente--stardewvalley{
+    background: linear-gradient(145deg, #a9511a, #762952);
+}
+
+.card__verso{
+    display: grid;
+    align-content: center;
+    gap: 10px;
+    background-color: #252e44;
+    transform: rotateY(180deg)
+}
+
+.card:is(:hover) .card__interno{
+    transform: translateY(-8px) rotateY(180deg);
+}
