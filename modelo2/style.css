@@ -77,6 +77,11 @@ body{
     padding: 15px 10px;
     font-weight: bold;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 4px;
 }
 
 .card__verso {
@@ -134,7 +139,7 @@ body{
 
 .card:hover{
     transform: scale(1.08);
-    transition: transform 5s ease;
+    transition: transform 1s ease;
     z-index: 10;
     opacity: 1;
     filter: grayscale(0%) blur(0);
@@ -144,6 +149,36 @@ body{
     opacity: 0.35;
     filter: grayscale(40%) blur(1px);
     transform: scale(0.92);
-    transition: transform 5s ease;
+    transition: transform 1s ease;
     z-index: 1;
+}
+
+.data_livro1{
+    background-color: #D92534;
+    padding: 3px 5px;
+    border-radius: 2px;
+}
+
+.data_livro2{
+    background-color: #F8AD1E;
+    padding: 3px 5px;
+    border-radius: 2px;
+}
+
+.data_livro3{
+    background-color: #ea976a;
+    padding: 3px 5px;
+    border-radius: 2px;
+}
+
+.data_livro4{
+    background-color: #539DA6;
+    padding: 3px 5px;
+    border-radius: 2px;
+}
+
+.data_livro5{
+    background-color: #A6387F;
+    padding: 3px 5px;
+    border-radius: 2px;
 }
